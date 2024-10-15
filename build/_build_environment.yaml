@@ -35,6 +35,13 @@ built_resources:
       hash: a4e644ba
     kind: Group
     destination: build/auth/4.icapi_extractors.Group.yaml
+  - identifier:
+      name: data_pipeline_oee
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/auth/data_pipeline_oee.yaml
+      hash: 31e9c723
+    kind: Group
+    destination: build/auth/5.data_pipeline_oee.Group.yaml
   data_sets:
   - identifier:
       externalId: ds_icapi
@@ -43,6 +50,13 @@ built_resources:
       hash: 252ee3a7
     kind: DataSet
     destination: build/data_sets/1.icapi.DataSet.yaml
+  - identifier:
+      externalId: ds_uc_oee
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/data_sets/data_sets.yaml
+      hash: 3d953d35
+    kind: DataSet
+    destination: build/data_sets/2.data_sets.DataSet.yaml
   extraction_pipelines:
   - identifier:
       externalId: ep_icapi_assets
@@ -175,6 +189,93 @@ built_resources:
       hash: c5d93670
     kind: Schedule
     destination: build/functions/2.schedules.Schedule.yaml
+  - identifier:
+      externalId: oee_timeseries
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/functions.yaml
+      hash: 3579da40
+    kind: Function
+    destination: build/functions/3.functions.Function.yaml
+  - identifier:
+      functionExternalId: oee_timeseries
+      name: Run calculations every 10 minutes for last hour of data
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/schedules.yaml
+      hash: 1dd72b15
+    kind: Schedule
+    destination: build/functions/4.schedules.Schedule.yaml
+  - identifier:
+      functionExternalId: oee_timeseries
+      name: Run calculations once a day for 30 days history (Oslo)
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/schedules.yaml
+      hash: 1dd72b15
+    kind: Schedule
+    destination: build/functions/4.schedules.Schedule.yaml
+  - identifier:
+      functionExternalId: oee_timeseries
+      name: Run calculations once a day for 30 days history (Nuremberg)
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/schedules.yaml
+      hash: 1dd72b15
+    kind: Schedule
+    destination: build/functions/4.schedules.Schedule.yaml
+  - identifier:
+      functionExternalId: oee_timeseries
+      name: Run calculations once a day for 30 days history (Marseille)
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/schedules.yaml
+      hash: 1dd72b15
+    kind: Schedule
+    destination: build/functions/4.schedules.Schedule.yaml
+  - identifier:
+      functionExternalId: oee_timeseries
+      name: Run calculations once a day for 30 days history (Houston)
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/schedules.yaml
+      hash: 1dd72b15
+    kind: Schedule
+    destination: build/functions/4.schedules.Schedule.yaml
+  - identifier:
+      functionExternalId: oee_timeseries
+      name: Run calculations once a day for 30 days history (Sao Paulo)
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/schedules.yaml
+      hash: 1dd72b15
+    kind: Schedule
+    destination: build/functions/4.schedules.Schedule.yaml
+  - identifier:
+      functionExternalId: oee_timeseries
+      name: Run calculations once a day for 30 days history (Kuala Lumpur)
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/schedules.yaml
+      hash: 1dd72b15
+    kind: Schedule
+    destination: build/functions/4.schedules.Schedule.yaml
+  - identifier:
+      functionExternalId: oee_timeseries
+      name: Run calculations once a day for 30 days history (Chicago)
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/schedules.yaml
+      hash: 1dd72b15
+    kind: Schedule
+    destination: build/functions/4.schedules.Schedule.yaml
+  - identifier:
+      functionExternalId: oee_timeseries
+      name: Run calculations once a day for 30 days history (Rotterdam)
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/schedules.yaml
+      hash: 1dd72b15
+    kind: Schedule
+    destination: build/functions/4.schedules.Schedule.yaml
+  - identifier:
+      functionExternalId: oee_timeseries
+      name: Run calculations once a day for 30 days history (London)
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/schedules.yaml
+      hash: 1dd72b15
+    kind: Schedule
+    destination: build/functions/4.schedules.Schedule.yaml
   raw:
   - identifier:
       dbName: State Store

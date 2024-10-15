@@ -249,27 +249,32 @@ yaml = ["PyYAML (>=6.0,<7.0)"]
 
 [[package]]
 name = "cognite-toolkit"
-version = "0.3.2"
+version = "0.3.3"
 description = "Official Cognite Data Fusion tool for project templates and configuration deployment"
 optional = false
-python-versions = "<4.0,>=3.10"
-files = [
-    {file = "cognite_toolkit-0.3.2-py3-none-any.whl", hash = "sha256:a519514b369c9d9b66fbf1f77980cb1e585118997334093a480a13a329b1a296"},
-    {file = "cognite_toolkit-0.3.2.tar.gz", hash = "sha256:05f195bf47bc2e2905b845d497fc5a65e20341d4a535d33ade229ddda1bf8319"},
-]
+python-versions = "^3.10"
+files = []
+develop = false
 
 [package.dependencies]
-cognite-sdk = {version = ">=7.63.1,<8.0.0", extras = ["pandas"]}
-mixpanel = ">=4.10.1,<5.0.0"
+cognite-sdk = {version = "^7.63.1", extras = ["pandas"]}
+mixpanel = "^4.10.1"
 packaging = ">=22.0,<25.0"
-pandas = ">=1.5.3,<3.0"
-python-dotenv = ">=1.0.0,<2.0.0"
-pyyaml = ">=6.0.1,<7.0.0"
-questionary = ">=2.0.1,<3.0.0"
-sentry-sdk = ">=2.1.0,<3.0.0"
-toml = ">=0.10.2,<0.11.0"
-typer = {version = ">=0.12.0,<1.0", extras = ["all"]}
-typing-extensions = ">=4.0,<5.0"
+pandas = ">=1.5.3, <3.0"
+pip-system-certs = "^4.0"
+python-dotenv = "^1.0.0"
+pyyaml = "^6.0.1"
+questionary = "^2.0.1"
+sentry-sdk = "^2.1.0"
+toml = "^0.10.2"
+typer = {version = ">=0.12.0, <1.0", extras = ["all"]}
+typing-extensions = "^4.0"
+
+[package.source]
+type = "git"
+url = "https://github.com/cognitedata/toolkit.git"
+reference = "certs"
+resolved_reference = "72913b9df6cd2a7a291d5caf0be711a4fabf6b06"
 
 [[package]]
 name = "colorama"
@@ -1088,4 +1093,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "78054e663d9a41cf0ba231870182cc8cdb50e27cf4aafc018665695df46aef6f"
+content-hash = "8931674e883e084238110c9aa6330cda4ca27df99a51348ada1197ebbbbb1116"
