@@ -4,7 +4,7 @@ project: cdf-bootcamp-23-test
 type: test
 selected:
 - modules
-cdf_toolkit_version: 0.3.2
+cdf_toolkit_version: 0.3.3
 built_resources:
   auth:
   - identifier:
@@ -293,3 +293,61 @@ built_resources:
       hash: fe459b6c
     kind: Table
     destination: build/raw/1.extraction_sources.Table.yaml
+  transformations:
+  - identifier:
+      externalId: create_asset_hierarchy
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/ice_cream_api/transformations/create_asset_hierarchy.schedule.yaml
+      hash: 8ebdb78a
+    kind: Schedule
+    destination: build/transformations/1.create_asset_hierarchy.schedule.yaml
+  - identifier:
+      externalId: create_asset_hierarchy
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/ice_cream_api/transformations/create_asset_hierarchy.yaml
+      hash: 94fac4da
+    kind: Transformation
+    destination: build/transformations/2.create_asset_hierarchy.Transformation.yaml
+    extra_sources:
+    - path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/ice_cream_api/transformations/create_asset_hierarchy.sql
+      hash: f9e7ebde
+  - identifier:
+      externalId: icapi_ts_assets_contextualization
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/ice_cream_api/transformations/icapi_ts_assets_contextualization.schedule.yaml
+      hash: '05347035'
+    kind: Schedule
+    destination: build/transformations/3.icapi_ts_assets_contextualization.schedule.yaml
+  - identifier:
+      externalId: icapi_ts_assets_contextualization
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/ice_cream_api/transformations/icapi_ts_assets_contextualization.yaml
+      hash: 97d9e1d0
+    kind: Transformation
+    destination: build/transformations/4.icapi_ts_assets_contextualization.Transformation.yaml
+    extra_sources:
+    - path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/ice_cream_api/transformations/icapi_ts_assets_contextualization.sql
+      hash: bcf4d56b
+  workflows:
+  - identifier:
+      externalId: wf_icapi_data_pipeline
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/ice_cream_api/workflows/wf_icapi_data_pipeline.WorkFlow.yaml
+      hash: '50583572'
+    kind: Workflow
+    destination: build/workflows/1.wf_icapi_data_pipeline.WorkFlow.yaml
+  - identifier:
+      externalId: icapi_trigger
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/ice_cream_api/workflows/wf_icapi_data_pipeline.WorkFlowTrigger.yaml
+      hash: b08a8128
+    kind: WorkflowTrigger
+    destination: build/workflows/2.wf_icapi_data_pipeline.WorkFlowTrigger.yaml
+  - identifier:
+      workflowExternalId: wf_icapi_data_pipeline
+      version: '1'
+    source:
+      path: C:/Users/piab/Documents/Visual studio code projects/cognitebootcamp/ice-cream-dataops/modules/bootcamp/ice_cream_api/workflows/wf_icapi_data_pipeline.WorkflowVersion.yaml
+      hash: 9fc77303
+    kind: WorkflowVersion
+    destination: build/workflows/3.wf_icapi_data_pipeline.WorkflowVersion.yaml
