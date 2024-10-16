@@ -15,7 +15,7 @@ env:
 jobs:
   build-modules:
     runs-on: ubuntu-latest
-    environment: test
+    environment: prod
     env:
         CDF_PROJECT: ${{ vars.CDF_PROJECT }}
         IDP_CLIENT_ID: ${{ vars.IDP_CLIENT_ID }}
@@ -26,7 +26,7 @@ jobs:
         DATA_PIPELINE_OEE_CLIENT_ID: ${{ vars.DATA_PIPELINE_OEE_CLIENT_ID }}
         ICAPI_EXTRACTORS_CLIENT_ID: ${{ vars.ICAPI_EXTRACTORS_CLIENT_ID }}
         CDF_CLUSTER: ${{ vars.CDF_CLUSTER }}
-        IDP_TENANT_ID: ${{ secrets.IDP_TENANT_ID }}
+        IDP_TENANT_ID: ${{ vars.IDP_TENANT_ID }}
         IDP_CLIENT_SECRET: ${{ secrets.IDP_CLIENT_SECRET }}
         DATA_PIPELINE_OEE_CLIENT_SECRET: ${{ secrets.DATA_PIPELINE_OEE_CLIENT_SECRET }}
         ICAPI_EXTRACTORS_CLIENT_SECRET: ${{ secrets.ICAPI_EXTRACTORS_CLIENT_SECRET }}
@@ -39,9 +39,9 @@ jobs:
       - name: Install cdf-tk
         run: pip install cognite-toolkit==0.3.2
       - name: "Build the templates"
-        run: cdf-tk build --build-dir=./build --env=test
+        run: cdf-tk build --build-dir=./build --env=prod
       - name: "Deploy"
         run: echo "Deploying to ${CDF_PROJECT} with ${CDF_CLUSTER}"
       - name: "Deploy the templates"
         run: |
-          cdf-tk deploy --env=test
+          cdf-tk deploy --env=prod
