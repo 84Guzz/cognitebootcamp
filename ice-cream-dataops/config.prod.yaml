@@ -5,7 +5,7 @@ environment:
   selected:
   - modules/bootcamp/data_foundation/auth
   - modules/bootcamp/ice_cream_api/auth
-  - modules/bootcamp/use_cases/oee/auth
+  - ice-cream-dataops/modules/bootcamp/use_cases/oee/auth
 
 variables:
   modules:
